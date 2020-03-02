@@ -1,9 +1,9 @@
+
 from tkinter import *
 import sqlite3
 import tkinter.ttk as ttk
 import tkinter.messagebox as tkMessageBox
 
-#DEVELOPED BY Mark Arvin
 root = Tk()
 root.title("Contact List")
 width = 700
@@ -175,7 +175,7 @@ def DeleteData():
             conn.commit()
             cursor.close()
             conn.close()
-    
+
 def AddNewWindow():
     global NewWindow
     FIRSTNAME.set("")
@@ -243,7 +243,7 @@ def AddNewWindow():
 
 
 
-    
+
 #============================FRAMES======================================
 Top = Frame(root, width=500, bd=1, relief=SOLID)
 Top.pack(side=TOP)
@@ -260,6 +260,7 @@ TableMargin.pack(side=TOP)
 #============================LABELS======================================
 lbl_title = Label(Top, text="Contact Management System", font=('arial', 16), width=500)
 lbl_title.pack(fill=X)
+
 
 #============================ENTRY=======================================
 
@@ -299,4 +300,3 @@ tree.bind('<Double-Button-1>', OnSelected)
 if __name__ == '__main__':
     Database()
     root.mainloop()
-    
